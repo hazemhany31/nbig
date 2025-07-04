@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zayed Hills - NBIG Developments</title>
+  <link rel="icon" href="images/logo.png">
+  <meta name="description" content="Zayed Hills by NBIG Developments - Premium residential community in Sheikh Zayed City, Egypt.">
+  <meta name="keywords" content="Zayed Hills, NBIG, real estate, residential, Sheikh Zayed, Egypt">
+  <meta name="author" content="NBIG Developments">
+  <meta name="robots" content="index, follow">
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Residence",
+    "name": "Zayed Hills",
+    "description": "Premium residential community in Sheikh Zayed City by NBIG Developments.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sheikh Zayed City",
+      "addressCountry": "EG"
+    },
+    "telephone": "+201112221121"
+  }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/nbig.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Same CSS as before */
+    .vision-hero {
+      background: #f7f7f7;
+      padding: 50px 0 0 0;
+    }
+    .vision-hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .vision-hero-info {
+      flex: 1 1 340px;
+      min-width: 300px;
+      max-width: 500px;
+    }
+    .vision-hero-img {
+      flex: 1 1 400px;
+      min-width: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vision-hero-img img {
+      width: 100%;
+      max-width: 540px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px 0 rgba(0,0,0,0.06);
+      object-fit: cover;
+    }
+    .project-title {
+      font-size: 3.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color:  #003399 ;
+      font-family: 'Work Sans', Arial, sans-serif;
+      text-transform: capitalize;
+    }
+    .project-subtitle {
+      font-size: 1.42rem;
+      color: #333;
+      margin-bottom: 24px;
+      font-family: 'Work Sans', Arial, sans-serif;
+    }
+    .project-meta {
+      color: #3b4c5a;
+      font-size: 1.06rem;
+      margin-bottom: 12px;
+    }
+    .project-meta span {
+      display: inline-block;
+      margin-right: 22px;
+      margin-bottom: 10px;
+      font-family: 'Work Sans', Arial, sans-serif;
+    }
+    .vision-section {
+      padding: 60px 0;
+    }
+    .section-bg {
+      background: #f7f7f7;
+    }
+    .split-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .split-section.reverse-row {
+      flex-direction: row-reverse;
+    }
+    .vision-img, .vision-content {
+      flex: 1 1 400px;
+      min-width: 320px;
+    }
+    .vision-img img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px 0 rgba(0,0,0,0.04);
+      object-fit: cover;
+      max-height: 420px;
+    }
+    .vision-content {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,0.03);
+      padding: 38px 34px;
+      font-family: 'Work Sans', Arial, sans-serif;
+      min-width: 300px;
+      max-width: 540px;
+    }
+    .vision-content h2 {
+      color:  #003399;
+      font-size: 2.1rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .vision-content hr {
+      border: none;
+      border-top: 2px solid #ececec;
+      margin: 10px 0 24px 0;
+      width: 50px;
+    }
+    .vision-content p {
+      color: #444;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .amenities-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 15px;
+    }
+    .amenities-list li {
+      background: #f7f7f7;
+      border-radius: 6px;
+      padding: 13px 16px;
+      margin-bottom: 10px;
+      font-size: 1.09rem;
+      color: #2d2d2d;
+      font-weight: 600;
+      box-shadow: 0 1px 7px 0 rgba(200,200,200,0.06);
+      font-family: 'Work Sans', Arial, sans-serif;
+    }
+    .back-to-projects-section {
+      background: #fff;
+      padding: 45px 0 30px 0;
+      text-align: center;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #003399;
+      color: #fff;
+      padding: 14px 34px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+      border: none;
+      margin-top: 12px;
+    }
+    .btn-primary:hover {
+      background:  #2563eb;
+      color: #fff;
+    }
+    @media (max-width: 1100px) {
+      .vision-hero-container, .split-section {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+      }
+      .vision-img img {
+        max-width: 100%;
+        max-height: 380px;
+      }
+    }
+    @media (max-width: 700px) {
+      .vision-content {
+        padding: 17px 8px;
+      }
+      .project-title {
+        font-size: 2.1rem;
+      }
+      .vision-content h2 {
+        font-size: 1.3rem;
+      }
+      .vision-img img {
+        max-height: 200px;
+      }
+    }
+    @media (max-width: 1100px) {
+      .vision-hero-container,
+      .split-section {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+      }
+      .vision-hero-info,
+      .vision-content,
+      .vision-img {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+      .vision-img img {
+        max-width: 100%;
+        max-height: 320px;
+      }
+    }
+    @media (max-width: 700px) {
+      .vision-content {
+        padding: 10px 4px;
+        font-size: 0.98rem;
+      }
+      .vision-hero-info {
+        padding: 10px 4px;
+        font-size: 1.1rem;
+      }
+      .project-title {
+        font-size: 1.5rem;
+        word-break: break-word;
+      }
+      .vision-content h2 {
+        font-size: 1.07rem;
+        word-break: break-word;
+      }
+      .vision-img img {
+        max-height: 540px;
+      }
+      .vision-section {
+        padding: 20px 0;
+      }
+      .amenities-list li {
+        font-size: 0.98rem;
+        padding: 10px 8px;
+      }
+      .project-meta {
+        font-size: 0.92rem;
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 420px) {
+      .vision-content,
+      .vision-hero-info {
+        padding: 6px 2px;
+        font-size: 0.9rem;
+      }
+      .project-title {
+        font-size: 1.1rem;
+      }
+      .vision-section {
+        padding: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html">
+        <img class="logo" src="images/logo.png" alt="NBIG Developments Logo">
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Projects</a></li>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="project-hero vision-hero">
+      <div class="container vision-hero-container">
+        <div class="vision-hero-info">
+          <h1 class="project-title">Zayed Hills</h1>
+          <p class="project-subtitle">Modern residential excellence in Sheikh Zayed City</p>
+          <div class="project-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Sheikh Zayed City</span>
+            <span><i class="fas fa-calendar-alt"></i> Completion: 2026</span>
+            <span><i class="fas fa-home"></i> Category: Residential Compound</span>
+          </div>
+        </div>
+        <div class="vision-hero-img">
+          <img src="images/zayed 4.jpg" alt="Zayed Hills Main Facade" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Bar -->
+    <div class="social-bar-simple">
+      <a href="https://www.facebook.com/nbigdevelopments" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/nbigdevelopments/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@nbigdevelopments6485" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/201112221121" target="_blank" rel="nofollow"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:19938"><i class="fas fa-phone"></i></a>
+    </div>
+
+    <!-- Overview Section -->
+    <section class="vision-section section-bg">
+      <div class="container split-section">
+        <div class="vision-img">
+          <img src="images/zayed 2.jpg" alt="Zayed Hills Overview" loading="lazy">
+        </div>
+        <div class="vision-content">
+          <h2>About Zayed Hills</h2>
+          <hr>
+          <p>
+            Zayed Hills is an exclusive residential compound in Sheikh Zayed City, offering a blend of modern architecture, smart layouts, and lush green spaces. Designed for families seeking luxury, privacy, and a vibrant community, Zayed Hills redefines contemporary living in West Cairo.
+          </p>
+          <p>
+            Enjoy 24/7 security, underground parking, and a prime location close to schools, shopping, and major city attractions—all in a sustainable, healthy environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Innovation Section -->
+    <section class="vision-section">
+      <div class="container split-section reverse-row">
+        <div class="vision-content">
+          <h2>Modern Design & Nature</h2>
+          <hr>
+          <p>
+            The architecture of Zayed Hills draws inspiration from nature and modern minimalism. Homes feature open spaces, large windows, and smart home systems for comfort and energy efficiency.
+          </p>
+          <p>
+            Landscaped gardens and walkable pathways create a peaceful atmosphere and encourage a healthy lifestyle for all residents.
+          </p>
+        </div>
+        <div class="vision-img">
+          <img src="images/zayed 3.jpg" alt="Zayed Hills Design Innovation" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="vision-section section-bg">
+      <div class="container split-section">
+        <div class="vision-img">
+            <img src="images/zayed 1.jpg" alt="Tall modern glass and concrete buildings viewed from below with blue sky and scattered clouds above creating a sense of openness and urban sophistication" loading="lazy">
+        </div>
+        <div class="vision-content">
+          <h2>Amenities</h2>
+          <hr>
+          <p>
+            Zayed Hills is designed for a modern family lifestyle, offering:
+          </p>
+          <ul class="amenities-list">
+            <li>Central Park & Green Areas</li>
+            <li>Family Clubhouse</li>
+            <li>Children’s Playground</li>
+            <li>Jogging & Cycling Tracks</li>
+            <li>Fitness Center</li>
+            <li>Retail Promenade</li>
+            <li>24/7 Security</li>
+            <li>Underground Parking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Projects Button -->
+    <section class="back-to-projects-section">
+      <div class="container">
+        <a href="index.html#portfolio" class="btn-primary"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 NBIG Developments. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
